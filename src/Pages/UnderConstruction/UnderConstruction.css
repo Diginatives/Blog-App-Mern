@@ -1,0 +1,30 @@
+.undc{
+    min-height: 100vh;
+    overflow: hidden;
+    
+    
+}
+
+.udc_block{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.udc_img{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+    margin-top: 110px;
+}
+
+.udc_img>img{
+    width: 500px;
+}
+
+.udc_img>h2{
+    color: tomato;
+}
+

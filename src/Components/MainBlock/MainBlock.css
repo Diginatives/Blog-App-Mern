@@ -1,0 +1,23 @@
+.main_block{
+    display: flex;
+    flex-direction: column;
+   width: 100%;
+   align-items:center;
+}
+
+.mb_heading{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    
+}
+h1{
+    font-size: 30px;
+}
+
+.blogs_list{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-right: 5px;
+}

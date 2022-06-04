@@ -1,0 +1,49 @@
+.login{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:rgb(239, 239, 239);
+    box-sizing: border-box !important;
+
+}
+
+
+form{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+input{
+    width: 300px;
+    height: 30px;
+  margin: 5px;
+}
+
+
+button{
+    width: 305px;
+    height: 30px;
+  margin: 10px;
+  background-color: rgb(247, 90, 51);
+  color: white;
+  border: none;
+  cursor: pointer;
+
+}
+
+.goback_button{
+  background-color: rgb(129, 176, 129);
+  cursor: pointer;
+  margin-top: 13px;
+}
+
+
+span{
+    color: red;
+    font-size: 15px;
+}

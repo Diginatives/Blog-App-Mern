@@ -1,0 +1,134 @@
+.new .new-top,
+.new .new-bottom {
+  -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+  box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+  padding: 20px;
+  margin: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 6px;
+  background-color: white;
+}
+
+.new .new-top h1,
+.new .new-bottom h1 {
+  color: gray;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: 'Roboto', sans-serif !important;
+}
+
+.new .new-top .left,
+.new .new-bottom .left {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.left>label{
+  display: flex;
+  margin-top: 30px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.new .new-top .left img,
+.new .new-bottom .left img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.new .new-top .right,
+.new .new-bottom .right {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+}
+
+.new-bottom{
+  height: 70vh;
+}
+
+.new .new-top .right form,
+.new .new-bottom .right form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: row !important;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 30px;
+  -ms-flex-pack: distribute;
+     
+}
+
+.new .new-top .right form .formInput,
+.new .new-bottom .right form .formInput {
+  width: 60%;
+}
+
+.new .new-top .right form .formInput label,
+.new .new-bottom .right form .formInput label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: row !important;
+  
+}
+.formInput>input{
+  margin-bottom: 25px;
+}
+
+.new .new-top .right form .formInput label .icon,
+.new .new-bottom .right form .formInput label .icon {
+  cursor: pointer;
+}
+
+.new .new-top .right form .formInput input,
+.new .new-bottom .right form .formInput input  {
+  width: 100%;
+  padding: 2px;
+  border: none;
+  border-bottom: 1px solid gray;
+}
+
+.formInput>select{
+  width: 100%;
+  padding: 2px;
+  border: none;
+  border-bottom: 1px solid gray;
+}
+
+.formInput>select:focus{
+  outline: none;
+  border-bottom: 2px solid #FF5151;
+}
+
+.new .new-top .right form .formInput input:focus,
+.new .new-bottom .right form .formInput input:focus {
+  outline: none;
+  border-bottom: 2px solid #FF5151;
+}
+
+.new .new-top .right form button,
+.new .new-bottom .right form button {
+  width: 300px;
+  padding: 10px;
+  border: none;
+  background-color: #FF5151;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+

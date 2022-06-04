@@ -1,0 +1,87 @@
+.blog_post{
+    width: 400px;
+    height: 400px;
+    margin: 30px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+   
+  
+}
+
+
+.blog_post.admin_post{
+ justify-content: center;
+    width: 800px;
+    height: 165px;
+    margin-bottom: 5px;
+    border-left: 6px solid rgb(47, 131, 47);
+    text-decoration: none;
+    border-bottom: none;
+    box-shadow: 2px 4px 10px 1px rgba(199, 199, 199, 0.75);
+    -webkit-box-shadow: 2px 4px 10px 1px rgba(223, 223, 223, 0.75);
+    -moz-box-shadow: 2px 4px 10px 1px rgba(223, 223, 223, 0.75);
+
+}
+
+
+
+a{
+    color: black;
+    text-decoration-thickness:1px;
+    text-decoration-color: rgb(247, 90, 51) ;
+}
+
+.blog_list_content{
+padding: 10px;
+background-color: rgba(255, 255, 255, 0.81);
+
+}
+
+.blog_list_description{
+    overflow:hidden;
+    font-size: 13px;
+    color: grey;
+    margin-top: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    
+
+}
+
+.blog_list_title{
+    font-size: 20px;
+    font-family: 'Noto Serif', serif !important;
+}
+
+.blogs_actions{
+    margin-top: 5px;
+    
+}
+
+.editicon{
+    color: green;
+    font-size: 10px;
+    cursor: pointer;
+   
+}
+
+.deleticon{
+color: red;
+font-size: 8px;
+margin-left: 10px;
+cursor: pointer;
+}
+
+.deleticon:hover{
+background-color: rgba(255, 0, 0, 0.163);
+}
+
+.editicon:hover{
+    background-color: rgba(0, 128, 0, 0.24);
+    }

@@ -1,0 +1,126 @@
+.DataTable {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 6px;
+  padding: 15px;
+  box-shadow: 2px 4px 10px 1px rgba(199, 199, 199, 0.75);
+  -webkit-box-shadow: 2px 4px 10px 1px rgba(223, 223, 223, 0.75);
+  -moz-box-shadow: 2px 4px 10px 1px rgba(223, 223, 223, 0.75);
+  height: 800px;
+  background-color: white;
+  z-index: 10;
+  margin: 30px 30px;
+}
+
+.DataTable .table-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  padding-bottom: 5px;
+}
+
+.DataTable .table-top .title {
+  font-size: 15px;
+  color: gray;
+  font-weight: 500;
+  font-family: 'Roboto', sans-serif !important;
+}
+
+.DataTable .table-top .icon {
+  color: gray;
+}
+
+.DataTable .table-top .addnew {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.DataTable .table-top .addnew .Addnew {
+  background-color: white;
+  padding: 5px;
+  text-decoration: none;
+  color: #549a54;
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px dotted #549a54;
+  border-radius: 5px;
+}
+
+.DataTable .table {
+  height: 760px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.DataTable .cellWithImg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.DataTable .cellWithImg .cellImg {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-right: 20px;
+}
+
+.DataTable .cellWithStatus {
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.DataTable .cellWithStatus.admin {
+  background-color: rgba(0, 128, 0, 0.05);
+  color: green;
+}
+
+.DataTable .cellWithStatus.user {
+  background-color: rgba(128, 128, 128, 0.103);
+  color: grey;
+}
+
+.DataTable .cellWithStatus.passive {
+  background-color: rgba(255, 0, 0, 0.05);
+  color: crimson;
+}
+
+.DataTable .cellAction {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
+}
+
+.DataTable .cellAction .viewButton {
+  padding: 2px 5px;
+  border-radius: 5px;
+  color: darkblue;
+  border: 1px dotted rgba(0, 0, 139, 0.596);
+  cursor: pointer;
+}
+
+.DataTable .cellAction .deleteButton {
+  padding: 2px 5px;
+  border-radius: 5px;
+  color: crimson;
+  border: 1px dotted rgba(220, 20, 60, 0.6);
+  cursor: pointer;
+}

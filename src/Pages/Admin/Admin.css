@@ -1,0 +1,12 @@
+.admin{
+    min-height: 100vh;
+    background-color:whitesmoke;
+}
+
+.admin_container{
+    display: flex;
+}
+
+.admin_pages{
+   flex: 8;
+}
