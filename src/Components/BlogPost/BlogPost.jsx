@@ -51,7 +51,6 @@ const BlogPost = ({ admin, posts }) => {
               key={BlogData._id}
             >
 
-
               <div className='blog_list_content'>
                 <div className='blog_list_heading'>
 
@@ -71,7 +70,7 @@ const BlogPost = ({ admin, posts }) => {
                 {/* To conver html tags description to text */}
                 <div className='blog_list_description' dangerouslySetInnerHTML={{ __html: BlogData.postbody }} />
 
-                {user&&( (admin && BlogData.username===user.username)||user.isAdmin) ? 
+                {admin&&( (user&&(BlogData.username===user.username)||user.isAdmin)) ? 
                 <div className='blogs_actions'>
                   <Link to={`/admin/write/${BlogData._id}`} >
                     <EditIcon className='editicon' />

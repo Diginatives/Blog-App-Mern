@@ -1,5 +1,6 @@
 .admin{
     min-height: 100vh;
+    width: 100%;
     background-color:whitesmoke;
 }
 
@@ -9,4 +10,5 @@
 
 .admin_pages{
    flex: 8;
+   background-color:whitesmoke;
 }

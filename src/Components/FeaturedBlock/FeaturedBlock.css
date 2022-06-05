@@ -1,6 +1,5 @@
 .featured_block{
     height: 80vh;
-    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,7 +26,7 @@
     display: flex;
     flex-direction: column;
     width:600px;
-    background-color:antiquewhite;
+    background-color: rgb(180, 187, 193);
 }
 
 .snippet{
@@ -68,4 +67,13 @@ text-decoration-color: rgb(247, 90, 51) ;
     display: -webkit-box;
     -webkit-line-clamp: 5;
     -webkit-box-orient: vertical;
+}
+
+
+@media (max-width: 1000px) {
+
+
+    .featured_block{display: none !important;}
+
+
 }

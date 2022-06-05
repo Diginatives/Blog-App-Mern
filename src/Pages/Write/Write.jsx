@@ -7,6 +7,7 @@ import { axiosUser } from '../../Requests';
 import { useParams } from 'react-router-dom';
 import { Context } from '../../Context/Context';
 import PropagateLoader from "react-spinners/PropagateLoader";
+import HashLoader from "react-spinners/HashLoader";
 
 
 
@@ -179,7 +180,7 @@ const Write = ({ posts }) => {
                 </div>
 
 
-                {loading && <Loader loading={loading} />}
+                {loading &&  <HashLoader style={{marginTop:'100px'}} color={'#F75A33'} loading={loading} size={50} />}
                 <Editor
 
                     initialValue="<p>This is the initial content of the editor.</p>"

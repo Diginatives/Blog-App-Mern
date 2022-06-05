@@ -15,6 +15,7 @@ const Home = ({ posts, loading }) => {
   return (
     <div className='home'>
       <Navbar />
+      
       {loading ? <Loader /> :
         <>
           <FeaturedBlock posts={posts} />

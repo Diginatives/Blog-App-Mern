@@ -12,16 +12,19 @@ import New from '../New/New';
 
 const Admin = ({ posts }) => {
 
-
   const [loading, setLoading] = useState(true);
+
+
 
   useEffect(() => {
     setTimeout(() => {
-      setLoading(false);
+    setLoading(false);
     }, 700)
   }, []);
 
 
+
+  
   return (
     <div className='admin'>
       <div className='admin_container'>

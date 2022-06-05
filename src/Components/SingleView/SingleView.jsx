@@ -6,26 +6,25 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import PinterestIcon from '@mui/icons-material/Pinterest';
 import { axiosPublic, axiosUser } from '../../Requests';
 import { useParams, useNavigate } from 'react-router-dom';
+import PropagateLoader from "react-spinners/PropagateLoader";
+
 
 function SingleView({ BlogsData }) {
 
   const [comment, setComment] = useState('');
   const [commentname, setCommentname] = useState('');
+  const [fetching, setFetching] = useState(false);
+  const [error, setError] = useState('');
+
   const PF = "https://blog-api-11.herokuapp.com/images/";
   const { id } = useParams();
-  const navigate = useNavigate();
-
-  console.log(id);
-
-  console.log(comment);
-  console.log(commentname);
-  console.log(BlogsData.comment)
 
 
   const handleSubmit = async (e) => {
-
     e.preventDefault();
-    console.log('comment made');
+    setFetching(true);
+    setError('');
+
     const newComment = {
       comment: {
         comment: comment,
@@ -35,17 +34,17 @@ function SingleView({ BlogsData }) {
     }
 
     try {
-       await axiosPublic.post(`/posts/${id}/comment`, newComment);
-    navigate('/');
+      const res = await axiosPublic.post(`/posts/${id}/comment`, newComment);
+      setFetching(false);
+      window.location.replace(`/view/${id}`);
 
-     
-     
     } catch (error) {
+      setError(error.message);
+      setFetching(false);
       console.log(error);
     }
 
   }
-
 
 
 
@@ -88,12 +87,12 @@ function SingleView({ BlogsData }) {
         <div className='comment_top'>
           {console.log(BlogsData.comment)}
           <h3>Recent comments</h3>
-          { BlogsData.comment.map((data) => {
+          {BlogsData.comment.map((data) => {
             return (<div style={{ marginTop: '30px' }}>
               <p style={{ marginBottom: '3px' }}>  {data.comment.comment}</p>
               <p style={{ color: 'grey', fontSize: '13px', marginTop: '4px' }}>By: {data.comment.commentname}</p>
-              <p style={{ color: 'grey', fontSize: '13px', marginBottom: '10px'}}>{
-              new Date(data.comment.postedat).toDateString()}</p>
+              <p style={{ color: 'grey', fontSize: '13px', marginBottom: '10px' }}>{
+                new Date(data.comment.postedat).toDateString()}</p>
               <hr />
             </div>)
           })}
@@ -108,7 +107,7 @@ function SingleView({ BlogsData }) {
           <h3>Leave a comment</h3>
         </div>
 
-        <form className='comment_form'>
+        <form className='comment_form' onSubmit={handleSubmit}>
 
           <textarea name='comment' required={true} placeholder='Write your comment' onChange={(e) => setComment(e.target.value)} />
 
@@ -118,10 +117,17 @@ function SingleView({ BlogsData }) {
           </div>
 
           <div className='comment_bottom'>
-            <button className='comment_button' onClick={handleSubmit}>Post Comment</button>
+            <button className='comment_button' type='submit'>Post Comment</button>
           </div>
 
         </form>
+        
+        <div style={{marginLeft:'120px'}}>
+            &nbsp;
+            {fetching && <PropagateLoader color={'rgb(247, 90, 51)'} size={6} />}
+            <span style={{ color: 'red' }}>{error}</span>
+          </div>
+
       </div>
     </>
   )

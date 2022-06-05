@@ -20,19 +20,16 @@ const New = () => {
 
 
 
-  // There are two section in handleSubmit, 000 is used for new User
-  // While other used for updating existing User
+  // 000 is used for new User, While other used for updating existing User
   const handleSubmit = async (e) => {
     e.preventDefault();
     setFetching(true);
-
 
     const newUser = {
       username: username,
       email: email,
       password: password,
       isAdmin: isAdmin
-
     }
     //handling image upload
     if (file) {
@@ -71,10 +68,10 @@ const New = () => {
 
       }
 
-
-
     }
   }
+
+
 
   const getSingleuser = async () => {
     //getting single user for updating
@@ -129,10 +126,12 @@ const New = () => {
       <div className="new-bottom">
         <div className="left">
           {isolduser ? <img className='uploaded_img'
-            src={file ? `${PF}${file}` : "https://icon-library.com/images/no-image-icon/no-image-icon-0.jpg"} alt="" />
+            src={file ? `${PF}${file}` : 
+            "https://icon-library.com/images/no-image-icon/no-image-icon-0.jpg"} alt="" />
 
             : <img className='uploaded_img'
-              src={file ? URL.createObjectURL(file) : "https://icon-library.com/images/no-image-icon/no-image-icon-0.jpg"} alt="" />
+              src={file ? URL.createObjectURL(file) : 
+              "https://icon-library.com/images/no-image-icon/no-image-icon-0.jpg"} alt="" />
           }
 
 

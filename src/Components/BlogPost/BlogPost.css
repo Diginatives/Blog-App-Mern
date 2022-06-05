@@ -2,6 +2,7 @@
     width: 400px;
     height: 400px;
     margin: 30px;
+    background-color: rgb(48, 84, 116);
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -85,3 +86,30 @@ background-color: rgba(255, 0, 0, 0.163);
 .editicon:hover{
     background-color: rgba(0, 128, 0, 0.24);
     }
+
+
+
+@media ( max-width: 470px){
+
+    .blog_post{
+        width: 350px !important;
+        height: 350px !important;
+        margin: 15px !important;
+       
+    }
+
+    
+.blog_post.admin_post{
+    justify-content: center;
+       width: 500px;
+       height: 200px !important;
+       margin-bottom: 5px;
+       border-left: 6px solid rgb(47, 131, 47);
+       text-decoration: none;
+       border-bottom: none;
+       box-shadow: 2px 4px 10px 1px rgba(199, 199, 199, 0.75);
+       -webkit-box-shadow: 2px 4px 10px 1px rgba(223, 223, 223, 0.75);
+       -moz-box-shadow: 2px 4px 10px 1px rgba(223, 223, 223, 0.75);
+   
+   }
+}

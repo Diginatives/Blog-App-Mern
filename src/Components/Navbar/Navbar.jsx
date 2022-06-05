@@ -34,17 +34,24 @@ const Navbar = () => {
                 </div>
             </div>
             <div className="nav_right">
+
                 <SearchIcon className='search_icon' />
                 <FacebookIcon className='top_icon' />
                 <TwitterIcon className='top_icon' />
                 <InstagramIcon className='top_icon' />
                 <PinterestIcon className='top_icon' />
+
+              
+              <div className='profile-div'>
+              
                 <div className='avatar'>
-                    <AccountCircleIcon />
+                   <AccountCircleIcon className= 'avatar_icon' /> 
                     {user ? <div onClick={handleLogout}
                         style={{ cursor: "pointer" }}> Log Out </div> : <NavLink to='/login'>Log In</NavLink>}
                 </div>
-                {user ? <NavLink to='/admin'> Admin </NavLink> : <div></div>}
+                {user ? <NavLink to='/admin' className= 'admin_text'>  Admin  </NavLink> : <div></div>}
+
+                </div>
             </div>
 
         </div>

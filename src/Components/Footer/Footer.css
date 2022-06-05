@@ -74,3 +74,32 @@ li {
 .top_icon {
     color: rgb(247, 90, 51);
 }
+
+
+@media (max-width: 530px){
+
+    .footer_left {
+        display: flex;
+        flex-direction: column;
+        flex: 50 !important;
+    }
+
+    
+.footer_right {
+    
+    margin-right: 30px;
+}
+
+.footer_logo {
+    margin-right: 0px !important;
+   
+}
+
+
+.footer_list {
+  display: none !important;
+
+
+}
+
+}

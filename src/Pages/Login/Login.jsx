@@ -17,7 +17,8 @@ const Login = () => {
   const [loading, setLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
   const { dispatch, isFetching, error } = useContext(Context);
-  console.log(errorMessage);
+
+
 
 
   const handleSubmit = async (e) => {
@@ -28,7 +29,7 @@ const Login = () => {
         email: email,
         password: password
       })
-      
+
       dispatch({ type: "LOGIN_SUCCESS", payload: res.data });
       window.alert('Logged in succefully!');
       navigate("/");
@@ -39,8 +40,6 @@ const Login = () => {
       setErrorMessage(error.message)
 
     }
-
-
   }
 
 
@@ -50,15 +49,16 @@ const Login = () => {
 
 
     <div className='login'>
+
       {loading ? <Loader loading={loading} /> :
         <>
           <h1>Login</h1>
 
           <form onSubmit={handleSubmit}>
-            <input type="email" required={true} placeholder='Enter Email' 
-             onChange={(e) => { setEmail(e.target.value) }} />
+            <input type="email" required={true} placeholder='Enter Email'
+              onChange={(e) => { setEmail(e.target.value) }} />
             <input type="password" required={true} minLength={3} placeholder='Enter Password'
-             onChange={(e) => { setPassword(e.target.value) }} />
+              onChange={(e) => { setPassword(e.target.value) }} />
             <button type='submit'>Login</button>
 
             {isFetching && <PropagateLoader color={'rgb(247, 90, 51)'} size={8} />}
