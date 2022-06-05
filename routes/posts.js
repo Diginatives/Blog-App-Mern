@@ -71,11 +71,14 @@ router.post("/:id/comment", async (req, res) => {
    // push the comment into the post.comments array
 postRelated.comment.push(comment);
    // save and redirect...
-await postRelated.save(function(err) {
-if(err) {console.log(err)}
 
-})
-  
+   try{
+const updatedpost= await postRelated.save({ new: true });
+res.status(200).json(updatedpost);
+   } catch(error){
+    res.status(500).json(err);
+   }
+ 
 } 
 
 );
